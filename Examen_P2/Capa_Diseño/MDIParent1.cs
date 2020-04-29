@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Capa_Diseño.Mantenimiento;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,15 +67,6 @@ namespace Capa_Diseño
         {
         }
 
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
-        }
-
-        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
-        }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -101,6 +93,75 @@ namespace Capa_Diseño
             foreach (Form childForm in MdiChildren)
             {
                 childForm.Close();
+            }
+        }
+
+        bool ventanaEmpleado = false;
+        MantEmpleado empleado = new MantEmpleado();
+        private void EmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is MantEmpleado);
+            if (ventanaEmpleado == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    empleado = new MantEmpleado();
+                }
+
+                empleado.MdiParent = this;
+                empleado.Show();
+                Application.DoEvents();
+                ventanaEmpleado = true;
+            }
+            else
+            {
+                empleado.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaDepartament = false;
+        MantDepartamento departamento = new MantDepartamento();
+        private void DepartamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is MantDepartamento);
+            if (ventanaDepartament == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    departamento = new MantDepartamento();
+                }
+
+                departamento.MdiParent = this;
+                departamento.Show();
+                Application.DoEvents();
+                ventanaDepartament = true;
+            }
+            else
+            {
+                departamento.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanaPuesto = false;
+        MantPuesto puesto = new MantPuesto();
+        private void PuestoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is MantPuesto);
+            if (ventanaPuesto == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    puesto = new MantPuesto();
+                }
+
+                puesto.MdiParent = this;
+                puesto.Show();
+                Application.DoEvents();
+                ventanaPuesto = true;
+            }
+            else
+            {
+                puesto.WindowState = System.Windows.Forms.FormWindowState.Normal;
             }
         }
     }

@@ -44,9 +44,13 @@ namespace Capa_Logica
             return sn.Modificar(datos, campos);
         }
 
-        public OdbcDataReader consultaejemplo()
+        public OdbcDataReader consultarempleado()
         {
-            return sn.consultaejemplo();
+            return sn.consultaempleado();
+        }
+        public OdbcDataReader consultapuesto()
+        {
+            return sn.consultapuesto();
         }
     }
 }

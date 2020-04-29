@@ -70,7 +70,7 @@ namespace Capa_Datos
 
         }
 
-//------------------------------------------------------INSERTAR MODIFICAR ELIMINAR---------------------------------------------------------------------------------------------------------
+//------------------------------------------------------INSERTAR MODIFICAR ELIMINAR EMPLEADO ---------------------------------------------------------------------------------------------------------
         public OdbcDataReader Insertar(string[] datos)
         {
             string query = "";
@@ -148,13 +148,12 @@ namespace Capa_Datos
             }
         }
 
-        // -------------------------------------------------------------------------------------------consulta Normal---------------------------------------------
-        public OdbcDataReader consultaejemplo()
+        public OdbcDataReader consultaempleado()
         {
             try
             {
                 cn.conexionbd();
-                string consulta = "Select pr.pkidproveedor, pr.pkidproducto,pr.Nombre,pr.Precio,pr.Descripcion,pr.Presentacion,pr.Costo,pr.estado,pr.pktipo_producto ,p.pkidBodega,p.Existencias from productoenbodega p INNER JOIN producto pr on p.pkidProducto = pr.pkidProducto  WHERE pr.estado = 1; ";
+                string consulta = "SELECT * FROM empleado WHERE estado = 1 ;";
                 comm = new OdbcCommand(consulta, cn.conexionbd());
                 OdbcDataReader mostrar = comm.ExecuteReader();
                 return mostrar;
@@ -166,6 +165,27 @@ namespace Capa_Datos
             }
 
         }
+
+        public OdbcDataReader consultapuesto()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "SELECT * FROM puesto WHERE estado = 1 ;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+
+
+
 
     }
 }

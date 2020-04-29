@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Capa_Diseño
+namespace Capa_Diseño.Consulta
 {
-    public partial class Form1 : Form
+    public partial class frm_consultaConcepto : Form
     {
-        public Form1()
+        public frm_consultaConcepto()
         {
             InitializeComponent();
         }

@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIParent1));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.iNICIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mANTENIMIENTOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pROCESOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -43,9 +47,8 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.iNICIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mANTENIMIENTOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pROCESOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -62,6 +65,35 @@
             this.menuStrip.Size = new System.Drawing.Size(1217, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
+            // 
+            // iNICIOToolStripMenuItem
+            // 
+            this.iNICIOToolStripMenuItem.Name = "iNICIOToolStripMenuItem";
+            this.iNICIOToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.iNICIOToolStripMenuItem.Text = "INICIO";
+            // 
+            // mANTENIMIENTOSToolStripMenuItem
+            // 
+            this.mANTENIMIENTOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.empleadoToolStripMenuItem,
+            this.departamentoToolStripMenuItem,
+            this.puestoToolStripMenuItem});
+            this.mANTENIMIENTOSToolStripMenuItem.Name = "mANTENIMIENTOSToolStripMenuItem";
+            this.mANTENIMIENTOSToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
+            this.mANTENIMIENTOSToolStripMenuItem.Text = "MANTENIMIENTOS";
+            // 
+            // empleadoToolStripMenuItem
+            // 
+            this.empleadoToolStripMenuItem.Name = "empleadoToolStripMenuItem";
+            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.empleadoToolStripMenuItem.Text = "Empleado";
+            this.empleadoToolStripMenuItem.Click += new System.EventHandler(this.EmpleadoToolStripMenuItem_Click);
+            // 
+            // pROCESOToolStripMenuItem
+            // 
+            this.pROCESOToolStripMenuItem.Name = "pROCESOToolStripMenuItem";
+            this.pROCESOToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.pROCESOToolStripMenuItem.Text = "PROCESO";
             // 
             // toolStrip
             // 
@@ -162,23 +194,19 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // iNICIOToolStripMenuItem
+            // departamentoToolStripMenuItem
             // 
-            this.iNICIOToolStripMenuItem.Name = "iNICIOToolStripMenuItem";
-            this.iNICIOToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.iNICIOToolStripMenuItem.Text = "INICIO";
+            this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.departamentoToolStripMenuItem.Text = "Departamento";
+            this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.DepartamentoToolStripMenuItem_Click);
             // 
-            // mANTENIMIENTOSToolStripMenuItem
+            // puestoToolStripMenuItem
             // 
-            this.mANTENIMIENTOSToolStripMenuItem.Name = "mANTENIMIENTOSToolStripMenuItem";
-            this.mANTENIMIENTOSToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
-            this.mANTENIMIENTOSToolStripMenuItem.Text = "MANTENIMIENTOS";
-            // 
-            // pROCESOToolStripMenuItem
-            // 
-            this.pROCESOToolStripMenuItem.Name = "pROCESOToolStripMenuItem";
-            this.pROCESOToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.pROCESOToolStripMenuItem.Text = "PROCESO";
+            this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
+            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.puestoToolStripMenuItem.Text = "Puesto";
+            this.puestoToolStripMenuItem.Click += new System.EventHandler(this.PuestoToolStripMenuItem_Click);
             // 
             // MDIParent1
             // 
@@ -221,6 +249,9 @@
         private System.Windows.Forms.ToolStripMenuItem iNICIOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mANTENIMIENTOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pROCESOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem empleadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem departamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem puestoToolStripMenuItem;
     }
 }
 

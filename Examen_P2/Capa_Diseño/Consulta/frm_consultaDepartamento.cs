@@ -9,37 +9,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_Logica;
-
-
 namespace Capa_Diseño.Consulta
 {
-    public partial class Frm_consulta : Form
+    public partial class frm_consultaDepartamento : Form
     {
-        public Frm_consulta()
+        public frm_consultaDepartamento()
         {
             InitializeComponent();
         }
-
         Logica logic = new Logica();
-        private void Btn_minimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void Btn_cerrar_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
         public void MostrarTabla()
         {
 
-            OdbcDataReader mostrar = logic.consultaejemplo();
+            OdbcDataReader mostrar = logic.consultapuesto();
             try
             {
                 while (mostrar.Read())
                 {
-                    Dgv_consulta.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(4), mostrar.GetString(5), mostrar.GetString(6), mostrar.GetString(7));
+                    Dgv_consulta.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2));
                 }
             }
             catch (Exception err)
@@ -49,10 +36,19 @@ namespace Capa_Diseño.Consulta
 
         }
 
-        private void Btn_actualizar_Click(object sender, EventArgs e)
+        private void Label1_Click(object sender, EventArgs e)
         {
-            Dgv_consulta.Rows.Clear();
-            MostrarTabla();
+
+        }
+
+        private void Btn_minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
 
         private void Btn_seleccionar_Click(object sender, EventArgs e)
@@ -66,6 +62,12 @@ namespace Capa_Diseño.Consulta
                 DialogResult = DialogResult.OK;
                 Close();
             }
+        }
+
+        private void Btn_actualizar_Click(object sender, EventArgs e)
+        {
+            Dgv_consulta.Rows.Clear();
+            MostrarTabla();
         }
     }
 }

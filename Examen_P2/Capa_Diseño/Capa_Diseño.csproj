@@ -46,23 +46,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consulta\Frm_consulta.cs">
+    <Compile Include="Consulta\frm_consultaConcepto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consulta\Frm_consulta.Designer.cs">
-      <DependentUpon>Frm_consulta.cs</DependentUpon>
+    <Compile Include="Consulta\frm_consultaConcepto.Designer.cs">
+      <DependentUpon>frm_consultaConcepto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Consulta\frm_consultaDepartamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Consulta\frm_consultaDepartamento.Designer.cs">
+      <DependentUpon>frm_consultaDepartamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimiento\EJEMPLO.cs">
+    <Compile Include="Consulta\Frm_consultaEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimiento\EJEMPLO.Designer.cs">
-      <DependentUpon>EJEMPLO.cs</DependentUpon>
+    <Compile Include="Consulta\Frm_consultaEmpleado.Designer.cs">
+      <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\Frm_consultaPuesto.Designer.cs">
+      <DependentUpon>Frm_consultaPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\MantConcepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\MantConcepto.Designer.cs">
+      <DependentUpon>MantConcepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\MantDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\MantDepartamento.Designer.cs">
+      <DependentUpon>MantDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\MantEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\MantEmpleado.Designer.cs">
+      <DependentUpon>MantEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\MantPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\MantPuesto.Designer.cs">
+      <DependentUpon>MantPuesto.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIParent1.cs">
       <SubType>Form</SubType>
@@ -72,11 +102,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Consulta\Frm_consulta.resx">
-      <DependentUpon>Frm_consulta.cs</DependentUpon>
+    <EmbeddedResource Include="Consulta\frm_consultaDepartamento.resx">
+      <DependentUpon>frm_consultaDepartamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimiento\EJEMPLO.resx">
-      <DependentUpon>EJEMPLO.cs</DependentUpon>
+    <EmbeddedResource Include="Consulta\Frm_consultaEmpleado.resx">
+      <DependentUpon>Frm_consultaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\Frm_consultaPuesto.resx">
+      <DependentUpon>Frm_consultaPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\MantDepartamento.resx">
+      <DependentUpon>MantDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\MantEmpleado.resx">
+      <DependentUpon>MantEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\MantPuesto.resx">
+      <DependentUpon>MantPuesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>
@@ -89,6 +131,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -111,6 +154,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Proceso\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-espionaje-42.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
